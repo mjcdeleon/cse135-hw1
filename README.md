@@ -1,4 +1,3 @@
-# cse135-hw1
 # CSE 135 — HW1: Client Side Basics, Site and Server Configuration
 
 ## Team Members
