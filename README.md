@@ -110,7 +110,7 @@ See `github-deploy.gif` for the deploy process.
 ---
 
 ## Compression Summary
-`[FILL IN ]`
+`After enabling Apache compression, the HTML response was transferred using gzip encoding. In Chrome DevTools, the response included the Content-Encoding: gzip header, and the amount of data transferred over the network was smaller than the original resource size. The browser automatically decompressed the response before rendering the page, so the visible page did not change.`
 
 ---
 
