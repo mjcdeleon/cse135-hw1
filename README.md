@@ -78,7 +78,7 @@ aJrSZtNJKvloyuZ9fMGRxG2LViVzSlL59j5j81VwBtlrQktwNmGTfQT9Ln0JbzPWv3NoEI
 ---
 
 ## GitHub Auto-Deploy
-- **Repo URL:** `[FILL IN]`
+- **Repo URL:** `(https://github.com/mjcdeleon/cse135-hw1.git)`
 - **Method:** The server web root is a git clone of our repo. A cron job runs a deploy
   script every minute that fetches and hard-resets the web root to match the `main`
   branch, so any push to `main` goes live automatically within about a minute.
