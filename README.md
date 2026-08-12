@@ -115,5 +115,4 @@ See `github-deploy.gif` for the deploy process.
 ---
 
 ## Server Header Change
-`[FILL IN — how you changed the Server: header to read "CSE135 Server", and why the`
-`obvious ServerTokens/ServerSignature change alone was not sufficient.]`
+`[FILL IN]`
