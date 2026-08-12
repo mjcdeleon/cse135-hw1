@@ -73,6 +73,7 @@ aJrSZtNJKvloyuZ9fMGRxG2LViVzSlL59j5j81VwBtlrQktwNmGTfQT9Ln0JbzPWv3NoEI
 ## Site Login (Basic Auth)
 - **Username:** `justin` or `another_user`
 - **Password:** `CSE135`
+- **Protected_URL:** https://jmcse135-hw1.site/
 
 ---
 
