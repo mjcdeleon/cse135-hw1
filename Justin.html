@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justin Nguyen &mdash; CSE 135</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --muted: #8b949e;
+      --accent: #3fb950;
+      --link: #58a6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem 1.25rem 4rem;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "SFMono-Regular", "Consolas", "Liberation Mono", Menlo, monospace;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    a.back {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    a.back::before {
+      content: "\2190 ";
+    }
+
+    a.back:hover,
+    a.back:focus {
+      color: var(--link);
+    }
+
+    header {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.7rem;
+      color: #fff;
+    }
+
+    header .role {
+      display: block;
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-top: 0.4rem;
+    }
+
+    #greeting {
+      margin: 1rem 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      min-height: 1.2em;
+    }
+
+    #greeting::before {
+      content: "$ ";
+      color: var(--accent);
+    }
+
+    section {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 1.25rem 1.75rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      margin: 0 0 0.9rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.6rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    li {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.85rem;
+      color: var(--text);
+      cursor: default;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    li:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .cat-line {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .cat-line strong {
+      color: var(--text);
+      font-weight: normal;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      li {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <a class="back" href="/">back to team home</a>
+
+    <header>
+      <h1>Justin Nguyen</h1>
+      <span class="role">Computer Engineering</span>
+      <p id="greeting">whoami</p>
+    </header>
+
+    <section aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <p>
+        Computer engineering student who spends the hours between commits gaming,
+        reading, and catching up on sleep &mdash; then offsets all of it at the gym
+        or out on a trail somewhere.
+      </p>
+      <p class="cat-line">
+        Also my cat is the favicon. :D
+      </p>
+    </section>
+
+    <section aria-labelledby="likes-heading">
+      <h2 id="likes-heading">Things I Like</h2>
+      <ul>
+        <li>Games</li>
+        <li>Sleeping</li>
+        <li>Reading</li>
+        <li>Hiking</li>
+        <li>Gym</li>
+        <li>My cat</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>CSE 135 &middot; Summer Session 2 2026</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var el = document.getElementById("greeting");
+      var full = 'echo "Hi, I\'m Justin \u2014 welcome to my page."';
+      var i = 0;
+
+      function type() {
+        el.textContent = full.slice(0, i);
+        i += 1;
+        if (i <= full.length) {
+          window.setTimeout(type, 45);
+        }
+      }
+
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce) {
+        el.textContent = full;
+      } else {
+        type();
+      }
+    })();
+  </script>
+</body>
+
+</html>
