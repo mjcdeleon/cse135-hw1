@@ -16,7 +16,9 @@
   <script src="https://cdn.logr-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
   <script>window.LogRocket && window.LogRocket.init('pb0clm/jm-site');</script>
 
-
+  <!--Umami tag-->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="7d53ff14-4d7d-48df-ac5c-97db6fe8e27b"></script>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CSE 135 &mdash; Team Home</title>
@@ -111,6 +113,19 @@
       padding-bottom: 0.6rem;
     }
 
+    h3 {
+      margin: 1.25rem 0 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    h3:first-of-type {
+      margin-top: 0.25rem;
+    }
+
     ul {
       list-style: none;
       margin: 0;
@@ -146,6 +161,12 @@
 
     .member-name {
       color: var(--text);
+    }
+
+    .flag {
+      color: var(--muted);
+      font-style: italic;
+      font-size: 0.82em;
     }
 
     .todo {
@@ -209,10 +230,45 @@
       </ul>
     </section>
 
-    <section aria-labelledby="hw2-heading">
+    <section id="homework-2" aria-labelledby="hw2-heading">
       <h2 id="hw2-heading">Homework 2</h2>
+
+      <h3>PHP</h3>
       <ul>
-        <li class="todo">TBD</li>
+        <li><a href="/hw2/php/hello-html-php.php">hello-html-php</a></li>
+        <li><a href="/hw2/php/hello-json-php.php">hello-json-php</a></li>
+        <li><a href="/hw2/php/environment-php.php">environment-php</a></li>
+        <li><a href="/hw2/php/echo-php.php">echo-php (endpoint)</a></li>
+        <li><a href="/hw2/php/state-php-1.php">state-php</a></li>
+      </ul>
+
+      <h3>Python</h3>
+      <ul>
+        <li><a href="/hw2/python/hello-html-python.py">hello-html-python</a></li>
+        <li><a href="/hw2/python/hello-json-python.py">hello-json-python</a></li>
+        <li><a href="/hw2/python/environment-python.py">environment-python</a></li>
+        <li><a href="/hw2/python/echo-form.html">echo-python (test form)</a></li>
+        <li><a href="/hw2/python/state-python.py">state-python</a></li>
+      </ul>
+
+      <h3>Node.js (without Express)</h3>
+      <ul>
+        <li><a href="/hw2/node/hello-html-node">hello-html-node</a></li>
+        <li><a href="/hw2/node/hello-json-node">hello-json-node</a></li>
+        <li><a href="/hw2/node/environment-node">environment-node</a></li>
+        <li><a href="/hw2/node/echo-form-node.html">echo-node (test form)</a></li>
+        <li><a href="/hw2/node/state-node-1">state-node</a></li>
+      </ul>
+
+      <h3>Perl (provided)</h3>
+      <ul>
+        <li><a href="/hw2/perl/hello.pl">hello.pl</a></li>
+        <li><a href="/hw2/perl/perl-hello-html-world.pl">perl-hello-html-world.pl</a></li>
+      </ul>
+
+      <h3>Shared echo test form</h3>
+      <ul>
+        <li><a href="/hw2/echo-form.html">echo test form (language dropdown)</a></li>
       </ul>
     </section>
 
